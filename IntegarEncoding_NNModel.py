@@ -19,7 +19,6 @@ X[:, 0] = labelencoder_X_1.fit_transform(X[:, 0])
 labelencoder_X_2 = LabelEncoder()
 X[:, 1] = labelencoder_X_2.fit_transform(X[:, 1]) 
 
- 
 #splitting the dataset into the Training set and Test set 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size= 0.2)
 
@@ -51,5 +50,4 @@ Y_pred = (Y_pred > 0.5)
 # Creating the Confusion Matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(Y_test, Y_pred)
-
 print(classifier.summary()) 
